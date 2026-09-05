@@ -1,0 +1,35 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets — NEVER commit live keys
+.env
+.env.local
+.env.*.local
+*.key
+**/.env
+frontend/.env
+
+# ML artifacts (rebuildable)
+models/*.pkl
+models/*.joblib
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+.env
+
