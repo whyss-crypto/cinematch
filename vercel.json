@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
+  "framework": "vite",
+  "functions": {
+    "api/main.py": {
+      "includeFiles": "api/**,src/**,data/movies.csv,requirements.txt",
+      "excludeFiles": "frontend/**,tests/**,scripts/**,assets/**,models/**,public/**,qa*.mjs,.pytest_cache/**,__pycache__/**,*.pyc"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/main.py" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
