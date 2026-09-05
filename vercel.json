@@ -1,18 +1,6 @@
 {
-  "version": 2,
   "buildCommand": "cd frontend && npm ci && npm run build",
   "outputDirectory": "frontend/dist",
   "framework": "vite",
-  "installCommand": "pip install --no-cache-dir -r api/requirements.txt && cd frontend && npm ci",
-  "functions": {
-    "api/main.py": {
-      "runtime": "python3.11",
-      "includeFiles": "api/**,src/**,data/movies.csv",
-      "excludeFiles": "frontend/**,tests/**,scripts/**,assets/**,models/**,public/**,qa*.mjs,.pytest_cache/**,__pycache__/**,*.pyc,*.pyo,*.so,*.a"
-    }
-  },
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/main.py" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
